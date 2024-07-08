@@ -9,10 +9,10 @@ class Password {
 
     //COSTRUTTORI
     Password() {
-        this.length = 12;
-        this.capitalLetters = true;
-        this.digits = true;
-        this.symbols = true;
+        this.length = 0;
+        this.capitalLetters = null;
+        this.digits = null;
+        this.symbols = null;
         this.password = "";
     }
 
@@ -22,13 +22,7 @@ class Password {
         return length;
     }
     public void setLength(int length) {
-        if(length < 8) {
-            System.out.print("\nPassword troppo corta!");
-        } else if (length > 60) {
-            System.out.print("\nPassword troppo lunga!");
-        } else {
-            this.length = length;
-        }
+        this.length = length;
     }
 
     public Boolean getCapitalLetters() {
